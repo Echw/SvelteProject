@@ -1,8 +1,6 @@
 <script lang="ts">
 	import type { Data } from 'src/types/Data';
 	import { data } from './data';
-	//@ts-ignore
-	import FaFilter from 'svelte-icons/fa/FaFilter.svelte';
 
 	let selectedName = '';
 	let filteredItemsByName: Data[] = data;
@@ -39,10 +37,7 @@
 	<thead>
 		<tr>
 			<th>ID</th>
-			<th class="name_sort" on:click={sort}
-				><div class="icon"><FaFilter /></div>
-				Name
-			</th>
+			<th class="name_sort" on:click={sort}> &#8645 Name </th>
 			<th>Data</th>
 		</tr>
 	</thead>
@@ -91,9 +86,5 @@
 		justify-content: center;
 		gap: 0.3rem;
 		cursor: pointer;
-	}
-
-	.icon {
-		width: 1rem;
 	}
 </style>
